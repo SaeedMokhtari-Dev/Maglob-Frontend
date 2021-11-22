@@ -15,8 +15,12 @@ import "./EditTestimonial.scss";
 import Languages from "../../../../app/constants/Languages";
 import {PlusOutlined} from "@ant-design/icons";
 import ImageConstants from "../../../../app/constants/ImageConstants";
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
+
 const {useEffect} = React;
 const { Option } = Select;
+
 
 interface EditTestimonialProps {
     testimonialStore?: TestimonialStore;
@@ -31,6 +35,27 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
     const [languagesOptions, setLanguageOptions] = React.useState([]);
 
     const [form] = Form.useForm();
+
+    const toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote', 'code-block'],
+
+        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+
+        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'font': [] }],
+        [{ 'align': [] }],
+        ['link', 'image'],
+
+        ['clean']                                         // remove formatting button
+    ];
 
     const formItemLayout = {
         labelCol: {
@@ -104,7 +129,15 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
         else
             viewModel.addTestimonialRequest[`${propName}`] = e;
     }
+    function onCommentChanged(e){
+        debugger;
+        if(testimonialId)
+            viewModel.editTestimonialRequest.comment = e;
+        else
+            viewModel.addTestimonialRequest.comment = e;
+    }
     function onChanged(e){
+        debugger;
         if(testimonialId)
             viewModel.editTestimonialRequest[`${e.target.id}`] = e.target.value;
         else
@@ -229,7 +262,8 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                                            message: i18next.t("Testimonials.Validation.Message.comment.Required")
                                        }
                                    ]}>
-                            <Input.TextArea onChange={onChanged}/>
+                            {/*<Input.TextArea onChange={onChanged}/>*/}
+                            <ReactQuill modules={{toolbar: toolbarOptions}} theme="snow"  onChange={onCommentChanged}/>
                         </Form.Item>
                     </Col>
                     <Divider>{i18next.t("General.Section.Uploads")}</Divider>
