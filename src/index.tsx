@@ -9,7 +9,6 @@ import {I18nextProvider} from "react-i18next";
 import {Provider} from "mobx-react";
 import i18n from "app/utils/i18n";
 import App from "app/components/App";
-import i18next from "i18next";
 import {configure} from "mobx";
 
 
@@ -53,6 +52,7 @@ ReactDOM.render(
                       menuStore={appStore.menu}
                       settingStore={appStore.setting}
                       certificateStore={appStore.certificateStore}
+                      testimonialStore={appStore.testimonialStore}
             >
                 <App />
             </Provider>

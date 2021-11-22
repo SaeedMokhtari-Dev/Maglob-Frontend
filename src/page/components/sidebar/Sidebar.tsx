@@ -47,6 +47,9 @@ const Sidebar: React.FC<SidebarProps> = inject(Stores.pageStore)(observer(({page
         <Menu.Item key="certificate" icon={<HomeOutlined />}>
             <Link to={Routes.certificate}>{i18next.t('Certificates.Menu.Title')}</Link>
         </Menu.Item>
+        <Menu.Item key="testimonial" icon={<HomeOutlined />}>
+            <Link to={Routes.testimonial}>{i18next.t('Testimonials.Menu.Title')}</Link>
+        </Menu.Item>
     </Menu>)
 
     async function onLoad() {

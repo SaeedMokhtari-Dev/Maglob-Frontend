@@ -27,4 +27,8 @@ export default
     certificate: "/app/certificate",
     editCertificate: "/app/certificate/edit/:certificateId",
     addCertificate: "/app/certificate/add",
+    // Testimonial
+    testimonial: "/app/testimonial",
+    editTestimonial: "/app/testimonial/edit/:testimonialId",
+    addTestimonial: "/app/testimonial/add",
 }

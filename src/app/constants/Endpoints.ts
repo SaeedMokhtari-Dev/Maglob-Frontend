@@ -42,6 +42,14 @@ export default
     apiCertificateList: "/api/certificate/list",
     apiCertificateActive: "/api/certificate/active",
 
+    apiTestimonialGet: "/api/testimonial/get",
+    apiTestimonialAdd: "/api/testimonial/add",
+    apiTestimonialEdit: "/api/testimonial/edit",
+    apiTestimonialDetail: "/api/testimonial/detail",
+    apiTestimonialDelete: "/api/testimonial/delete",
+    apiTestimonialList: "/api/testimonial/list",
+    apiTestimonialActive: "/api/testimonial/active",
+
     apiAttachmentDetail: "/api/attachment/detail",
 
     apiDashboardCustomerGet: "/api/dashboard/customer",

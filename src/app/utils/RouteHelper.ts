@@ -16,3 +16,7 @@ export function getEditCertificateRoute(certificateId: number = null): string
 {
     return Routes.editCertificate.replace('/:certificateId', certificateId ? `/${certificateId}` : '');
 }
+export function getEditTestimonialRoute(testimonialId: number = null): string
+{
+    return Routes.editTestimonial.replace('/:testimonialId', testimonialId ? `/${testimonialId}` : '');
+}

@@ -6,6 +6,7 @@ import UserStore from "../../entities/Users/stores/UserStore";
 import MenuStore from "../../entities/Menus/stores/MenuStore";
 import SettingStore from "../../entities/Settings/stores/SettingStore";
 import CertificateStore from "../../entities/Certificates/stores/CertificateStore";
+import TestimonialStore from "../../entities/Testimonials/stores/TestimonialStore";
 
 export class AppStore
 {
@@ -17,6 +18,7 @@ export class AppStore
     menu: MenuStore;
     setting: SettingStore;
     certificateStore: CertificateStore;
+    testimonialStore: TestimonialStore;
 
     constructor()
     {
@@ -28,5 +30,6 @@ export class AppStore
         this.menu = new MenuStore(this);
         this.setting = new SettingStore(this);
         this.certificateStore = new CertificateStore(this);
+        this.testimonialStore = new TestimonialStore(this);
     }
 }

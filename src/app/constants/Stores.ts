@@ -8,4 +8,5 @@ export default {
     menuStore: 'menuStore',
     settingStore: 'settingStore',
     certificateStore: 'certificateStore',
+    testimonialStore: 'testimonialStore',
 }

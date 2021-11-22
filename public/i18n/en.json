@@ -284,6 +284,35 @@
   "Certificates.Error.Delete.Message": "An error has occurred while trying to delete certificate.",
   "Certificates.Error.List.Message": "An error has occurred while trying to get certificate list.",
 
+  "Testimonials.Menu.Title": "Testimonials",
+  "Testimonials.Page.Title": "Testimonials",
+  "Testimonials.Page.SubTitle": "This page is for define testimonials",
+  "Testimonials.Add.HeaderText": "Add a new Testimonial",
+  "Testimonials.Label.key": "key",
+  "Testimonials.Label.title": "title",
+  "Testimonials.Label.comment": "comment",
+  "Testimonials.Label.picture": "picture",
+  "Testimonials.Label.isActive": "isActive",
+  "Testimonials.Label.createdAt": "createdAt",
+  "Testimonials.Label.modifiedAt": "modifiedAt",
+  "Testimonials.Label.language": "language",
+
+  "Testimonials.Button.Register": "Save",
+  "Testimonials.Button.Cancel": "Cancel",
+
+  "Testimonials.Validation.Message.title.Required": "Please enter title",
+
+  "Api.Testimonial.Add.Successful": "A new testimonial added successfully",
+  "Api.Testimonial.Edit.Successful": "selected testimonial edited successfully",
+  "Api.Testimonial.Deleted.Successful": "selected testimonial deleted successfully",
+
+  "Testimonials.Error.Get.Message": "An error has occurred while trying to get testimonials list.",
+  "Testimonials.Error.Detail.Message": "An error has occurred while trying to get testimonial details.",
+  "Testimonials.Error.Add.Message": "An error has occurred while trying to add new testimonial.",
+  "Testimonials.Error.Edit.Message": "An error has occurred while trying to edit testimonial.",
+  "Testimonials.Error.Delete.Message": "An error has occurred while trying to delete testimonial.",
+  "Testimonials.Error.List.Message": "An error has occurred while trying to get testimonial list.",
+
 
   "General.Qualification.UnderDiploma": "UnderDiploma",
   "General.Qualification.Diploma": "Diploma",

@@ -26,6 +26,8 @@ import SettingList from "../../entities/Settings/components/list/SettingList";
 import EditSetting from "../../entities/Settings/components/edit/EditSetting";
 import CertificateList from "../../entities/Certificates/components/list/CertificateList";
 import EditCertificate from "../../entities/Certificates/components/edit/EditCertificate";
+import TestimonialList from "../../entities/Testimonials/components/list/TestimonialList";
+import EditTestimonial from "../../entities/Testimonials/components/edit/EditTestimonial";
 
 
 const App: React.FC = () =>
@@ -80,6 +82,10 @@ const App: React.FC = () =>
                                     <Route exact roles={[RoleType.admin]} path={Routes.certificate} component={CertificateList} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.editCertificate} component={EditCertificate} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.addCertificate} component={EditCertificate} />
+
+                                    <Route exact roles={[RoleType.admin]} path={Routes.testimonial} component={TestimonialList} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.editTestimonial} component={EditTestimonial} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.addTestimonial} component={EditTestimonial} />
 
                                     <Route component={NotFoundPage} />
                                 </Switch>
