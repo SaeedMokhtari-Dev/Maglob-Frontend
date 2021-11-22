@@ -1,0 +1,135 @@
+@import "colors";
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.checked,
+.unchecked{
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-success, .checked {
+  background: rgb(28, 184, 65);
+  /* this is a green */
+}
+
+.button-error {
+  background: rgb(202, 60, 60);
+  /* this is a maroon */
+}
+
+.button-warning {
+  background: rgb(223, 117, 20);
+  /* this is an orange */
+}
+
+.button-secondary, .unchecked {
+  background: rgb(66, 184, 221);
+  /* this is a light blue */
+}
+
+.bg-primary {
+  background-color: #4190F7;
+}
+
+.bg-success {
+  background-color: #70C040;
+}
+
+.bg-warning {
+  background-color: #EFAF41;
+}
+
+.bg-danger {
+  background-color: #E23C39;
+}
+
+.checkbox-button-hidden {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox-button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+.checkbox-button-checked {
+  border: 1px solid #0047be;
+  box-shadow: 0 0 4px 0 rgba(0, 71, 190, 0.2);
+}
+
+/*
+.ant-btn {
+  min-width: 100px;
+  height: 36px;
+  font-size: 13px;
+}
+.ant-btn-primary {
+  background-color: $woodland;
+  border-color: $woodland !important;
+  color: #ffffff;
+
+  &:hover {
+    background-color: $woodland !important;
+    border-color: $woodland !important;
+    color: #ffffff;
+  }
+  &:focus {
+    background-color: $woodland !important;
+    border-color: $woodland !important;
+    color: #ffffff;
+    //opacity: 100%;
+  }
+  &:active {
+    background-color: $woodland !important;
+    border-color: $woodland !important;
+    color: #ffffff;
+    opacity: 50%;
+  }
+}
+
+.ant-btn {
+  @extend .noselect;
+  transition-duration: 0s;
+  &:hover {
+    opacity: 85%;
+  }
+  &:active {
+    opacity: 70%;
+  }
+  &:disabled {
+    opacity: 30%;
+  }
+}
+
+.btn-simple {
+  @extend .noselect;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-simple:hover {
+  opacity: 0.8;
+}
+.btn-simple:active {
+  opacity: 0.6;
+}
+.btn-simple:disabled {
+  opacity: 0.3;
+}*/
