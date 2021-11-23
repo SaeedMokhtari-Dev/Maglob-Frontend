@@ -8,6 +8,8 @@ import SettingStore from "../../entities/Settings/stores/SettingStore";
 import CertificateStore from "../../entities/Certificates/stores/CertificateStore";
 import TestimonialStore from "../../entities/Testimonials/stores/TestimonialStore";
 import DynamicPageStore from "../../entities/DynamicPages/stores/DynamicPageStore";
+import ProductStore from "../../entities/Products/stores/ProductStore";
+import CustomerSupportRequestStore from "../../entities/CustomerSupportRequests/stores/CustomerSupportRequestStore";
 
 export class AppStore
 {
@@ -21,6 +23,8 @@ export class AppStore
     certificateStore: CertificateStore;
     testimonialStore: TestimonialStore;
     dynamicPageStore: DynamicPageStore;
+    productStore: ProductStore;
+    customerSupportRequestStore: CustomerSupportRequestStore;
 
     constructor()
     {
@@ -34,5 +38,7 @@ export class AppStore
         this.certificateStore = new CertificateStore(this);
         this.testimonialStore = new TestimonialStore(this);
         this.dynamicPageStore = new DynamicPageStore(this);
+        this.productStore = new ProductStore(this);
+        this.customerSupportRequestStore = new CustomerSupportRequestStore(this);
     }
 }

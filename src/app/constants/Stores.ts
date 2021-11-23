@@ -10,4 +10,6 @@ export default {
     certificateStore: 'certificateStore',
     testimonialStore: 'testimonialStore',
     dynamicPageStore: 'dynamicPageStore',
+    productStore: 'productStore',
+    customerSupportRequestStore: 'customerSupportRequestStore',
 }

@@ -30,6 +30,14 @@ import TestimonialList from "../../entities/Testimonials/components/list/Testimo
 import EditTestimonial from "../../entities/Testimonials/components/edit/EditTestimonial";
 import DynamicPageList from "../../entities/DynamicPages/components/list/DynamicPageList";
 import EditDynamicPage from "../../entities/DynamicPages/components/edit/EditDynamicPage";
+import ProductList from "../../entities/Products/components/list/ProductList";
+import EditProduct from "../../entities/Products/components/edit/EditProduct";
+import CustomerSupportRequestList
+    from "../../entities/CustomerSupportRequests/components/list/CustomerSupportRequestList";
+import EditCustomerSupportRequest
+    from "../../entities/CustomerSupportRequests/components/edit/EditCustomerSupportRequest";
+import DetailCustomerSupportRequest
+    from "../../entities/CustomerSupportRequests/components/detail/DetailCustomerSupportRequest";
 
 
 const App: React.FC = () =>
@@ -92,6 +100,15 @@ const App: React.FC = () =>
                                     <Route exact roles={[RoleType.admin]} path={Routes.dynamicPage} component={DynamicPageList} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.editDynamicPage} component={EditDynamicPage} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.addDynamicPage} component={EditDynamicPage} />
+
+                                    <Route exact roles={[RoleType.admin]} path={Routes.product} component={ProductList} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.editProduct} component={EditProduct} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.addProduct} component={EditProduct} />
+
+                                    <Route exact roles={[RoleType.admin]} path={Routes.customerSupportRequest} component={CustomerSupportRequestList} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.editCustomerSupportRequest} component={EditCustomerSupportRequest} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.detailCustomerSupportRequest} component={DetailCustomerSupportRequest} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.addCustomerSupportRequest} component={EditCustomerSupportRequest} />
 
                                     <Route component={NotFoundPage} />
                                 </Switch>

@@ -28,6 +28,14 @@ export default
     apiMenuList: "/api/menu/list",
     apiMenuActive: "/api/menu/active",
 
+    apiCustomerSupportRequestAdd: "/api/customer-support-request/add",
+    apiCustomerSupportRequestEdit: "/api/customer-support-request/edit",
+    apiCustomerSupportRequestGet: "/api/customer-support-request/get",
+    apiCustomerSupportRequestDetail: "/api/customer-support-request/detail",
+    apiCustomerSupportRequestDelete: "/api/customer-support-request/delete",
+    apiCustomerSupportRequestList: "/api/customer-support-request/list",
+    apiCustomerSupportRequestActive: "/api/customer-support-request/active",
+
     apiSettingAdd: "/api/setting/add",
     apiSettingEdit: "/api/setting/edit",
     apiSettingGet: "/api/setting/get",
@@ -41,6 +49,14 @@ export default
     apiCertificateDelete: "/api/certificate/delete",
     apiCertificateList: "/api/certificate/list",
     apiCertificateActive: "/api/certificate/active",
+
+    apiProductGet: "/api/product/get",
+    apiProductAdd: "/api/product/add",
+    apiProductEdit: "/api/product/edit",
+    apiProductDetail: "/api/product/detail",
+    apiProductDelete: "/api/product/delete",
+    apiProductList: "/api/product/list",
+    apiProductActive: "/api/product/active",
 
     apiTestimonialGet: "/api/testimonial/get",
     apiTestimonialAdd: "/api/testimonial/add",

@@ -54,6 +54,8 @@ ReactDOM.render(
                       certificateStore={appStore.certificateStore}
                       testimonialStore={appStore.testimonialStore}
                       dynamicPageStore={appStore.dynamicPageStore}
+                      productStore={appStore.productStore}
+                      customerSupportRequestStore={appStore.customerSupportRequestStore}
             >
                 <App />
             </Provider>

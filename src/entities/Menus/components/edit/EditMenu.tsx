@@ -93,6 +93,7 @@ const EditMenu: React.FC<EditMenuProps> = inject(Stores.menuStore)(observer(({me
     };
 
     function onUnload() {
+        setLanguageOptions([]);
         menuStore.onMenuEditPageUnload();
     }
     function onSelectChanged(e, propName){
@@ -172,7 +173,7 @@ const EditMenu: React.FC<EditMenuProps> = inject(Stores.menuStore)(observer(({me
                             rules={[
                                 {
                                     required: true,
-                                    message: i18next.t("Users.Validation.Message.language.Required")
+                                    message: i18next.t("Menus.Validation.Message.language.Required")
                                 }
                             ]}>
                             <Select showSearch={true} onChange={(e) => onSelectChanged(e, "language")} >
@@ -187,7 +188,7 @@ const EditMenu: React.FC<EditMenuProps> = inject(Stores.menuStore)(observer(({me
                             rules={[
                                 {
                                     required: true,
-                                    message: i18next.t("Users.Validation.Message.url.Required")
+                                    message: i18next.t("Menus.Validation.Message.url.Required")
                                 }
                             ]}>
                             <Input style={{direction: "ltr"}} onChange={onChanged}/>

@@ -233,6 +233,35 @@
   "Menus.Error.Delete.Message": "An error has occurred while trying to delete menu.",
   "Menus.Error.List.Message": "An error has occurred while trying to get menu list.",
 
+  "CustomerSupportRequests.Menu.Title": "CustomerSupportRequests",
+  "CustomerSupportRequests.Page.Title": "CustomerSupportRequests",
+  "CustomerSupportRequests.Page.SubTitle": "This page is for define customerSupportRequests",
+  "CustomerSupportRequests.Add.HeaderText": "Add a new CustomerSupportRequest",
+  "CustomerSupportRequests.Detail.HeaderText": "Detail CustomerSupportRequest with Id: ",
+  "CustomerSupportRequests.Edit.HeaderText": "Edit CustomerSupportRequest with Id: ",
+  "CustomerSupportRequests.Label.key": "key",
+  "CustomerSupportRequests.Label.name": "name",
+  "CustomerSupportRequests.Label.phoneNumber": "phoneNumber",
+  "CustomerSupportRequests.Label.description": "description",
+  "CustomerSupportRequests.Label.createdAt": "createdAt",
+  "CustomerSupportRequests.Label.modifiedAt": "modifiedAt",
+
+  "CustomerSupportRequests.Button.Register": "Save",
+  "CustomerSupportRequests.Button.Cancel": "Cancel",
+
+  "CustomerSupportRequests.Validation.Message.title.Required": "Please enter title",
+
+  "Api.CustomerSupportRequest.Add.Successful": "A new customerSupportRequest added successfully",
+  "Api.CustomerSupportRequest.Edit.Successful": "selected customerSupportRequest edited successfully",
+  "Api.CustomerSupportRequest.Deleted.Successful": "selected customerSupportRequest deleted successfully",
+
+  "CustomerSupportRequests.Error.Get.Message": "An error has occurred while trying to get customerSupportRequests list.",
+  "CustomerSupportRequests.Error.Detail.Message": "An error has occurred while trying to get customerSupportRequest details.",
+  "CustomerSupportRequests.Error.Add.Message": "An error has occurred while trying to add new customerSupportRequest.",
+  "CustomerSupportRequests.Error.Edit.Message": "An error has occurred while trying to edit customerSupportRequest.",
+  "CustomerSupportRequests.Error.Delete.Message": "An error has occurred while trying to delete customerSupportRequest.",
+  "CustomerSupportRequests.Error.List.Message": "An error has occurred while trying to get customerSupportRequest list.",
+
   "Settings.Menu.Title": "Settings",
   "Settings.Page.Title": "Settings",
   "Settings.Page.SubTitle": "This page is for define settings",
@@ -287,6 +316,45 @@
   "Certificates.Error.Edit.Message": "An error has occurred while trying to edit certificate.",
   "Certificates.Error.Delete.Message": "An error has occurred while trying to delete certificate.",
   "Certificates.Error.List.Message": "An error has occurred while trying to get certificate list.",
+
+  "Products.Menu.Title": "Products",
+  "Products.Page.Title": "Products",
+  "Products.Page.SubTitle": "This page is for define products",
+  "Products.Add.HeaderText": "Add a new Product",
+  "Products.Edit.HeaderText": "Edit Product with Id: ",
+  "Products.Label.key": "key",
+  "Products.Label.name": "name",
+  "Products.Label.description": "description",
+  "Products.Label.model": "model",
+  "Products.Label.quality": "quality",
+  "Products.Label.volume": "volume",
+  "Products.Label.displayOrder": "displayOrder",
+  "Products.Label.isActive": "isActive",
+  "Products.Label.descriptionSeo": "descriptionSeo",
+  "Products.Label.certificateItems": "certificateItems",
+  "Products.Label.productCertificateIds": "productCertificateIds",
+  "Products.Label.largePicture": "largePicture",
+  "Products.Label.smallPicture": "smallPicture",
+  "Products.Label.createdAt": "createdAt",
+  "Products.Label.modifiedAt": "modifiedAt",
+  "Products.Label.language": "language",
+
+
+  "Products.Button.Register": "Save",
+  "Products.Button.Cancel": "Cancel",
+
+  "Products.Validation.Message.title.Required": "Please enter title",
+
+  "Api.Product.Add.Successful": "A new product added successfully",
+  "Api.Product.Edit.Successful": "selected product edited successfully",
+  "Api.Product.Deleted.Successful": "selected product deleted successfully",
+
+  "Products.Error.Get.Message": "An error has occurred while trying to get products list.",
+  "Products.Error.Detail.Message": "An error has occurred while trying to get product details.",
+  "Products.Error.Add.Message": "An error has occurred while trying to add new product.",
+  "Products.Error.Edit.Message": "An error has occurred while trying to edit product.",
+  "Products.Error.Delete.Message": "An error has occurred while trying to delete product.",
+  "Products.Error.List.Message": "An error has occurred while trying to get product list.",
 
   "Testimonials.Menu.Title": "Testimonials",
   "Testimonials.Page.Title": "Testimonials",
@@ -347,14 +415,6 @@
   "DynamicPages.Error.Edit.Message": "An error has occurred while trying to edit dynamicPage.",
   "DynamicPages.Error.Delete.Message": "An error has occurred while trying to delete dynamicPage.",
   "DynamicPages.Error.List.Message": "An error has occurred while trying to get dynamicPage list.",
-
-
-  "General.Qualification.UnderDiploma": "UnderDiploma",
-  "General.Qualification.Diploma": "Diploma",
-  "General.Qualification.Associate": "Associate",
-  "General.Qualification.Bachelor": "Bachelor",
-  "General.Qualification.Master": "Master",
-  "General.Qualification.PHD": "PHD",
 
   "General.Language.Farsi": "Farsi",
   "General.Language.English": "English"

@@ -95,6 +95,7 @@ const EditSetting: React.FC<EditSettingProps> = inject(Stores.settingStore)(obse
     };
 
     function onUnload() {
+        setLanguageOptions([]);
         settingStore.onSettingEditPageUnload();
     }
     function onSelectChanged(e, propName){

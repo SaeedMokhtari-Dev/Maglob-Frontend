@@ -19,6 +19,11 @@ export default
     menu: "/app/menu",
     editMenu: "/app/menu/edit/:menuId",
     addMenu: "/app/menu/add",
+    // CustomerSupportRequest
+    customerSupportRequest: "/app/customerSupportRequest",
+    editCustomerSupportRequest: "/app/customerSupportRequest/:customerSupportRequestId/edit",
+    detailCustomerSupportRequest: "/app/customerSupportRequest/:customerSupportRequestId/detail",
+    addCustomerSupportRequest: "/app/customerSupportRequest/add",
     // Setting
     setting: "/app/setting",
     editSetting: "/app/setting/edit/:settingId",
@@ -35,4 +40,8 @@ export default
     dynamicPage: "/app/dynamicPage",
     editDynamicPage: "/app/dynamicPage/edit/:dynamicPageId",
     addDynamicPage: "/app/dynamicPage/add",
+    // Product
+    product: "/app/product",
+    editProduct: "/app/product/edit/:productId",
+    addProduct: "/app/product/add",
 }

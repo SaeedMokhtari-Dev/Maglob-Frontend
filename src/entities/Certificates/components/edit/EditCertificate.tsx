@@ -95,6 +95,7 @@ const EditCertificate: React.FC<EditCertificateProps> = inject(Stores.certificat
     };
 
     function onUnload() {
+        setLanguageOptions([]);
         certificateStore.onCertificateEditPageUnload();
     }
     function onSelectChanged(e, propName){

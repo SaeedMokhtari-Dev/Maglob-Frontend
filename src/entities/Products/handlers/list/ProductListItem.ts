@@ -1,11 +1,10 @@
+import IDeserialize from "../../../../app/interfaces/deserialize";
 import {makeAutoObservable} from "mobx";
-import IDeserialize from "../../../app/interfaces/deserialize";
 
-export default class CompanyListItem implements IDeserialize
+export default class ProductListItem implements IDeserialize
 {
     key: number;
-    name: string;
-    balance: number;
+    title: string;
 
     constructor() {
         makeAutoObservable(this);

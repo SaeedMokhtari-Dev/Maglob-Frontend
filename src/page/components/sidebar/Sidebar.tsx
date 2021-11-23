@@ -53,6 +53,12 @@ const Sidebar: React.FC<SidebarProps> = inject(Stores.pageStore)(observer(({page
         <Menu.Item key="dynamicPage" icon={<HomeOutlined />}>
             <Link to={Routes.dynamicPage}>{i18next.t('DynamicPages.Menu.Title')}</Link>
         </Menu.Item>
+        <Menu.Item key="product" icon={<HomeOutlined />}>
+            <Link to={Routes.product}>{i18next.t('Products.Menu.Title')}</Link>
+        </Menu.Item>
+        <Menu.Item key="customerSupportRequest" icon={<HomeOutlined />}>
+            <Link to={Routes.customerSupportRequest}>{i18next.t('CustomerSupportRequests.Menu.Title')}</Link>
+        </Menu.Item>
     </Menu>)
 
     async function onLoad() {

@@ -5,8 +5,6 @@ import {message} from "antd";
 import GetAdminRequest from "../handlers/get/GetAdminRequest";
 import GetAdminHandler from "../handlers/get/GetAdminHandler";
 import AdminStore from "../stores/AdminStore";
-import CompanyListItem from "../handlers/get/CompanyListItem";
-import PetrolStationItem from "../handlers/get/PetrolStationItem";
 import {getLocalizedString} from "../../app/utils/Localization";
 
 export default class GetAdminViewModel {
@@ -14,15 +12,6 @@ export default class GetAdminViewModel {
     errorMessage: string;
 
     getAdminRequest: GetAdminRequest;
-
-    companyListItems: CompanyListItem[];
-    petrolStationItems: PetrolStationItem[];
-    subscriptionRequests: number;
-    rechargeRequests: number;
-    carRequests: number;
-
-    sumCompaniesBalance: number;
-    sumPetrolStationsBalance: number;
 
     constructor(public customerStore: AdminStore) {
         makeAutoObservable(this);
@@ -36,13 +25,6 @@ export default class GetAdminViewModel {
 
             if (response && response.success) {
                 let result = response.data;
-                this.companyListItems = [];
-                this.companyListItems = result.companyListItems;
-                this.petrolStationItems = [];
-                this.petrolStationItems = result.petrolStationItems;
-                this.subscriptionRequests = result.subscriptionRequests;
-                this.rechargeRequests = result.rechargeRequests;
-                this.carRequests = result.carRequests;
             } else {
                 this.errorMessage = getLocalizedString(response.message);
             }

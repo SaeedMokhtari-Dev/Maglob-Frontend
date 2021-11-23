@@ -89,6 +89,8 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
         else{
             testimonialStore.editTestimonialViewModel.addTestimonialRequest = new AddTestimonialRequest();
             testimonialStore.editTestimonialViewModel.detailTestimonialResponse = new DetailTestimonialResponse();
+            testimonialStore.editTestimonialViewModel.addTestimonialRequest.comment = "<p>Hello World</p>"
+            testimonialStore.editTestimonialViewModel.detailTestimonialResponse.comment = "<p>Hello World</p>"
         }
 
         let languagesOptions = [];
@@ -120,6 +122,7 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
     };
 
     function onUnload() {
+        setLanguageOptions([]);
         testimonialStore.onTestimonialEditPageUnload();
     }
     function onSelectChanged(e, propName){
@@ -263,7 +266,8 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                                        }
                                    ]}>
                             {/*<Input.TextArea onChange={onChanged}/>*/}
-                            <ReactQuill modules={{toolbar: toolbarOptions}} theme="snow" style={{direction: "ltr"}} onChange={onCommentChanged}/>
+                            <ReactQuill modules={{toolbar: toolbarOptions}} theme="snow" style={{direction: "ltr"}}
+                                        onChange={onCommentChanged}/>
                         </Form.Item>
                     </Col>
                     <Divider>{i18next.t("General.Section.Uploads")}</Divider>

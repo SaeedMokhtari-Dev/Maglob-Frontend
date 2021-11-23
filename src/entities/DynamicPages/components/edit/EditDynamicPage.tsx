@@ -89,6 +89,8 @@ const EditDynamicPage: React.FC<EditDynamicPageProps> = inject(Stores.dynamicPag
         else{
             dynamicPageStore.editDynamicPageViewModel.addDynamicPageRequest = new AddDynamicPageRequest();
             dynamicPageStore.editDynamicPageViewModel.detailDynamicPageResponse = new DetailDynamicPageResponse();
+            dynamicPageStore.editDynamicPageViewModel.addDynamicPageRequest.editor = "<p>Hello World</p>"
+            dynamicPageStore.editDynamicPageViewModel.detailDynamicPageResponse.editor = "<p>Hello World</p>"
         }
 
         let languagesOptions = [];
@@ -120,6 +122,7 @@ const EditDynamicPage: React.FC<EditDynamicPageProps> = inject(Stores.dynamicPag
     };
 
     function onUnload() {
+        setLanguageOptions([]);
         dynamicPageStore.onDynamicPageEditPageUnload();
     }
     function onSelectChanged(e, propName){
