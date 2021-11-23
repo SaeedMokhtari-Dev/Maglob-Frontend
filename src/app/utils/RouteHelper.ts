@@ -20,3 +20,7 @@ export function getEditTestimonialRoute(testimonialId: number = null): string
 {
     return Routes.editTestimonial.replace('/:testimonialId', testimonialId ? `/${testimonialId}` : '');
 }
+export function getEditDynamicPageRoute(dynamicPageId: number = null): string
+{
+    return Routes.editDynamicPage.replace('/:dynamicPageId', dynamicPageId ? `/${dynamicPageId}` : '');
+}

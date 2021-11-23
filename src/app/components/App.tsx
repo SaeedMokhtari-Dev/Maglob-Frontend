@@ -28,6 +28,8 @@ import CertificateList from "../../entities/Certificates/components/list/Certifi
 import EditCertificate from "../../entities/Certificates/components/edit/EditCertificate";
 import TestimonialList from "../../entities/Testimonials/components/list/TestimonialList";
 import EditTestimonial from "../../entities/Testimonials/components/edit/EditTestimonial";
+import DynamicPageList from "../../entities/DynamicPages/components/list/DynamicPageList";
+import EditDynamicPage from "../../entities/DynamicPages/components/edit/EditDynamicPage";
 
 
 const App: React.FC = () =>
@@ -86,6 +88,10 @@ const App: React.FC = () =>
                                     <Route exact roles={[RoleType.admin]} path={Routes.testimonial} component={TestimonialList} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.editTestimonial} component={EditTestimonial} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.addTestimonial} component={EditTestimonial} />
+
+                                    <Route exact roles={[RoleType.admin]} path={Routes.dynamicPage} component={DynamicPageList} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.editDynamicPage} component={EditDynamicPage} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.addDynamicPage} component={EditDynamicPage} />
 
                                     <Route component={NotFoundPage} />
                                 </Switch>

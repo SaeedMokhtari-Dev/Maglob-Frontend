@@ -9,4 +9,5 @@ export default {
     settingStore: 'settingStore',
     certificateStore: 'certificateStore',
     testimonialStore: 'testimonialStore',
+    dynamicPageStore: 'dynamicPageStore',
 }

@@ -1,14 +1,10 @@
 import IDeserialize from "../../../../app/interfaces/deserialize";
 import {makeAutoObservable} from "mobx";
 
-export default class TestimonialItem implements IDeserialize
+export default class DynamicPageListItem implements IDeserialize
 {
     key: number;
     title: string;
-    isActive: boolean;
-    createdAt: string;
-    modifiedAt: string;
-    language: string;
 
     constructor() {
         makeAutoObservable(this);

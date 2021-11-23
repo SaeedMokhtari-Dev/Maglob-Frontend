@@ -53,6 +53,7 @@ ReactDOM.render(
                       settingStore={appStore.setting}
                       certificateStore={appStore.certificateStore}
                       testimonialStore={appStore.testimonialStore}
+                      dynamicPageStore={appStore.dynamicPageStore}
             >
                 <App />
             </Provider>

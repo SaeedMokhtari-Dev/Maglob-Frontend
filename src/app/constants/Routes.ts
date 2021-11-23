@@ -31,4 +31,8 @@ export default
     testimonial: "/app/testimonial",
     editTestimonial: "/app/testimonial/edit/:testimonialId",
     addTestimonial: "/app/testimonial/add",
+    // DynamicPage
+    dynamicPage: "/app/dynamicPage",
+    editDynamicPage: "/app/dynamicPage/edit/:dynamicPageId",
+    addDynamicPage: "/app/dynamicPage/add",
 }

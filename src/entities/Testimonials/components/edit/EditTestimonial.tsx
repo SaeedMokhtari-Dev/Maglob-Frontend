@@ -263,7 +263,7 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                                        }
                                    ]}>
                             {/*<Input.TextArea onChange={onChanged}/>*/}
-                            <ReactQuill modules={{toolbar: toolbarOptions}} theme="snow"  onChange={onCommentChanged}/>
+                            <ReactQuill modules={{toolbar: toolbarOptions}} theme="snow" style={{direction: "ltr"}} onChange={onCommentChanged}/>
                         </Form.Item>
                     </Col>
                     <Divider>{i18next.t("General.Section.Uploads")}</Divider>

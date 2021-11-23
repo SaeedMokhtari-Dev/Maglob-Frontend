@@ -50,6 +50,14 @@ export default
     apiTestimonialList: "/api/testimonial/list",
     apiTestimonialActive: "/api/testimonial/active",
 
+    apiDynamicPageGet: "/api/dynamic-page/get",
+    apiDynamicPageAdd: "/api/dynamic-page/add",
+    apiDynamicPageEdit: "/api/dynamic-page/edit",
+    apiDynamicPageDetail: "/api/dynamic-page/detail",
+    apiDynamicPageDelete: "/api/dynamic-page/delete",
+    apiDynamicPageList: "/api/dynamic-page/list",
+    apiDynamicPageActive: "/api/dynamic-page/active",
+
     apiAttachmentDetail: "/api/attachment/detail",
 
     apiDashboardCustomerGet: "/api/dashboard/customer",

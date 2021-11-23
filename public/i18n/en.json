@@ -318,6 +318,36 @@
   "Testimonials.Error.Delete.Message": "An error has occurred while trying to delete testimonial.",
   "Testimonials.Error.List.Message": "An error has occurred while trying to get testimonial list.",
 
+  "DynamicPages.Menu.Title": "DynamicPages",
+  "DynamicPages.Page.Title": "DynamicPages",
+  "DynamicPages.Page.SubTitle": "This page is for define dynamicPages",
+  "DynamicPages.Add.HeaderText": "Add a new DynamicPage",
+  "DynamicPages.Edit.HeaderText": "Edit DynamicPage with Id: ",
+  "DynamicPages.Label.key": "key",
+  "DynamicPages.Label.title": "title",
+  "DynamicPages.Label.descriptionSeo": "descriptionSeo",
+  "DynamicPages.Label.editor": "editor",
+  "DynamicPages.Label.isActive": "isActive",
+  "DynamicPages.Label.createdAt": "createdAt",
+  "DynamicPages.Label.modifiedAt": "modifiedAt",
+  "DynamicPages.Label.language": "language",
+
+  "DynamicPages.Button.Register": "Save",
+  "DynamicPages.Button.Cancel": "Cancel",
+
+  "DynamicPages.Validation.Message.title.Required": "Please enter title",
+
+  "Api.DynamicPage.Add.Successful": "A new dynamicPage added successfully",
+  "Api.DynamicPage.Edit.Successful": "selected dynamicPage edited successfully",
+  "Api.DynamicPage.Deleted.Successful": "selected dynamicPage deleted successfully",
+
+  "DynamicPages.Error.Get.Message": "An error has occurred while trying to get dynamicPages list.",
+  "DynamicPages.Error.Detail.Message": "An error has occurred while trying to get dynamicPage details.",
+  "DynamicPages.Error.Add.Message": "An error has occurred while trying to add new dynamicPage.",
+  "DynamicPages.Error.Edit.Message": "An error has occurred while trying to edit dynamicPage.",
+  "DynamicPages.Error.Delete.Message": "An error has occurred while trying to delete dynamicPage.",
+  "DynamicPages.Error.List.Message": "An error has occurred while trying to get dynamicPage list.",
+
 
   "General.Qualification.UnderDiploma": "UnderDiploma",
   "General.Qualification.Diploma": "Diploma",
