@@ -41,6 +41,9 @@
   "General.SearchPanel.SearchButton": "جستجو",
   "General.SearchPanel.ResetButton": "ریست",
 
+  "General.Section.Uploads": "آپلودها",
+  "General.Section.GeneralInformation": "اطلاعات عمومی",
+
   "Dashboard.Menu.Title": "داشبورد",
   "Dashboard.Admin.Title": "داشبورد ادمین",
   "Dashboard.Customer.Title": "پروفایل",
@@ -118,8 +121,11 @@
   "Users.Label.password": "کلمه عبور",
   "Users.Label.confirmPassword": "تایید کلمه عبور",
   "Users.Label.phoneNumber": "تلفن ثابت",
+  "Users.Label.email": "ایمیل",
   "Users.Label.isActive": "فعال؟",
   "Users.Label.createdAt": "تاریخ ایجاد",
+  "Users.Label.modifiedAt": "تاریخ ویرایش",
+  "Users.Label.lastLoginAt": "تاریخ آخرین ورود",
 
   "Users.Button.Register": "ذخیره",
   "Users.Button.Cancel": "انصراف",

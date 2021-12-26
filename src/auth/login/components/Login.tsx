@@ -98,11 +98,11 @@ const Login: React.FC<LoginProps> = inject('authStore')(observer(({authStore}) =
                             <Button type="primary" className={"button"} loading={viewModel.isProcessing} htmlType="submit">
                                 {i18next.t("Authentication.Button.Login")}
                             </Button>
-                            <div className="link">
+                            {/*<div className="link">
                                 <Button type="link" onClick={resetRegisterPage}>
                                     {i18next.t('Authentication.Link.Register')}
                                 </Button>
-                            </div>
+                            </div>*/}
                             {/*<div className="link">
                                 <Link to={Routes.resetPassword}></Link>
                                 <Button type="link" onClick={resetPasswordPage}>

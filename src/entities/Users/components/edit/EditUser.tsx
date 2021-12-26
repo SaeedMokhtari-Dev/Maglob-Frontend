@@ -130,7 +130,7 @@ const EditUser: React.FC<EditUserProps> = inject(Stores.userStore)(observer(({us
                   key={"userForm"}
                  scrollToFirstError>
                 <Row gutter={[24, 16]}>
-                    <Divider>{i18next.t("Users.Section.CertificateInformation")}</Divider>
+                    <Divider>{i18next.t("General.Section.GeneralInformation")}</Divider>
                     <Col span={8}>
                         <Form.Item name="firstName" initialValue={viewModel?.detailUserResponse?.firstName}
                                    key={"firstName"}
