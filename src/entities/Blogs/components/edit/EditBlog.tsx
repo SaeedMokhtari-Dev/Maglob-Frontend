@@ -7,11 +7,11 @@ import {
     Divider, Form, Input, InputNumber, PageHeader, Image, Row, Select, Spin, Table, message, Upload, Switch, Checkbox
 } from "antd";
 import i18next from "i18next";
-import DetailTestimonialResponse from "../../handlers/detail/DetailTestimonialResponse";
-import AddTestimonialRequest from "../../handlers/add/AddTestimonialRequest";
+import DetailBlogResponse from "../../handlers/detail/DetailBlogResponse";
+import AddBlogRequest from "../../handlers/add/AddBlogRequest";
 import history from "../../../../app/utils/History";
-import TestimonialStore from "../../stores/TestimonialStore";
-import "./EditTestimonial.scss";
+import BlogStore from "../../stores/BlogStore";
+import "./EditBlog.scss";
 import Languages from "../../../../app/constants/Languages";
 import {PlusOutlined} from "@ant-design/icons";
 import ImageConstants from "../../../../app/constants/ImageConstants";
@@ -22,16 +22,16 @@ const {useEffect} = React;
 const { Option } = Select;
 
 
-interface EditTestimonialProps {
-    testimonialStore?: TestimonialStore;
+interface EditBlogProps {
+    blogStore?: BlogStore;
     match?: any;
 }
 
-const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonialStore)(observer(({testimonialStore, match}) =>
+const EditBlog: React.FC<EditBlogProps> = inject(Stores.blogStore)(observer(({blogStore, match}) =>
 {
 
     const [dataFetched, setDataFetched] = React.useState(false);
-    const [testimonialId, setTestimonialId] = React.useState(0);
+    const [blogId, setBlogId] = React.useState(0);
     const [languagesOptions, setLanguageOptions] = React.useState([]);
 
     const [form] = Form.useForm();
@@ -75,22 +75,22 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
 
     async function onLoad()
     {
-        testimonialStore.onTestimonialEditPageLoad();
+        blogStore.onBlogEditPageLoad();
 
-        let testimonialIdParam = +match.params?.testimonialId;
+        let blogIdParam = +match.params?.blogId;
 
-        setTestimonialId(testimonialIdParam);
+        setBlogId(blogIdParam);
 
-        if(testimonialIdParam)
+        if(blogIdParam)
         {
-            await testimonialStore.editTestimonialViewModel.getDetailTestimonial(testimonialIdParam);
-            testimonialStore.editTestimonialViewModel.editTestimonialRequest.testimonialId = testimonialIdParam;
+            await blogStore.editBlogViewModel.getDetailBlog(blogIdParam);
+            blogStore.editBlogViewModel.editBlogRequest.blogId = blogIdParam;
         }
         else{
-            testimonialStore.editTestimonialViewModel.addTestimonialRequest = new AddTestimonialRequest();
-            testimonialStore.editTestimonialViewModel.detailTestimonialResponse = new DetailTestimonialResponse();
-            testimonialStore.editTestimonialViewModel.addTestimonialRequest.comment = "<p>Hello World</p>"
-            testimonialStore.editTestimonialViewModel.detailTestimonialResponse.comment = "<p>Hello World</p>"
+            blogStore.editBlogViewModel.addBlogRequest = new AddBlogRequest();
+            blogStore.editBlogViewModel.detailBlogResponse = new DetailBlogResponse();
+            blogStore.editBlogViewModel.addBlogRequest.description = "<p>Hello World</p>"
+            blogStore.editBlogViewModel.detailBlogResponse.description = "<p>Hello World</p>"
         }
 
         let languagesOptions = [];
@@ -102,20 +102,20 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
         setDataFetched(true);
     }
 
-    let viewModel = testimonialStore.editTestimonialViewModel;
+    let viewModel = blogStore.editBlogViewModel;
 
     if(!viewModel) return;
 
     async function onFinish(values: any) {
         
         viewModel.errorMessage = "";
-        if(testimonialId)
+        if(blogId)
         {
-            await viewModel.editTestimonial(viewModel.editTestimonialRequest);
+            await viewModel.editBlog(viewModel.editBlogRequest);
         }
         else
         {
-            await viewModel.addTestimonial(viewModel.addTestimonialRequest);
+            await viewModel.addBlog(viewModel.addBlogRequest);
         }
         if(!viewModel.errorMessage)
             history.goBack();
@@ -123,46 +123,46 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
 
     function onUnload() {
         setLanguageOptions([]);
-        testimonialStore.onTestimonialEditPageUnload();
+        blogStore.onBlogEditPageUnload();
     }
     function onSelectChanged(e, propName){
 
-        if(testimonialId)
-            viewModel.editTestimonialRequest[`${propName}`] = e;
+        if(blogId)
+            viewModel.editBlogRequest[`${propName}`] = e;
         else
-            viewModel.addTestimonialRequest[`${propName}`] = e;
+            viewModel.addBlogRequest[`${propName}`] = e;
     }
     function onCommentChanged(e){
         
-        if(testimonialId)
-            viewModel.editTestimonialRequest.comment = e;
+        if(blogId)
+            viewModel.editBlogRequest.description = e;
         else
-            viewModel.addTestimonialRequest.comment = e;
+            viewModel.addBlogRequest.description = e;
     }
     function onChanged(e){
         
-        if(testimonialId)
-            viewModel.editTestimonialRequest[`${e.target.id}`] = e.target.value;
+        if(blogId)
+            viewModel.editBlogRequest[`${e.target.id}`] = e.target.value;
         else
-            viewModel.addTestimonialRequest[`${e.target.id}`] = e.target.value;
+            viewModel.addBlogRequest[`${e.target.id}`] = e.target.value;
     }
     function onNumberChanged(e, propName){
-        if(testimonialId)
-            viewModel.editTestimonialRequest[`${propName}`] = e;
+        if(blogId)
+            viewModel.editBlogRequest[`${propName}`] = e;
         else
-            viewModel.addTestimonialRequest[`${propName}`] = e;
+            viewModel.addBlogRequest[`${propName}`] = e;
     }
     function onCheckboxChange(e){
-        if(testimonialId)
-            viewModel.editTestimonialRequest[`${e.target.id}`] = e.target.checked;
+        if(blogId)
+            viewModel.editBlogRequest[`${e.target.id}`] = e.target.checked;
         else
-            viewModel.addTestimonialRequest[`${e.target.id}`] = e.target.checked;
+            viewModel.addBlogRequest[`${e.target.id}`] = e.target.checked;
     }
     function onMaskChanged(e) {
-        if(testimonialId)
-            viewModel.editTestimonialRequest[`${e.target.id}`] = e.target.value;
+        if(blogId)
+            viewModel.editBlogRequest[`${e.target.id}`] = e.target.value;
         else
-            viewModel.addTestimonialRequest[`${e.target.id}`] = e.target.value;
+            viewModel.addBlogRequest[`${e.target.id}`] = e.target.value;
     }
     const toBase64 = file => new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -186,14 +186,14 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
             return false;
         }
         let imageUrl = await toBase64(file);
-        viewModel.detailTestimonialResponse[`${propName}`] = imageUrl;
-        if(testimonialId)
+        viewModel.detailBlogResponse[`${propName}`] = imageUrl;
+        if(blogId)
         {
-            viewModel.editTestimonialRequest[`${propName}`] = imageUrl;
-            viewModel.editTestimonialRequest[`${propName}Changed`] = true;
+            viewModel.editBlogRequest[`${propName}`] = imageUrl;
+            viewModel.editBlogRequest[`${propName}Changed`] = true;
         }
         else{
-            viewModel.addTestimonialRequest[`${propName}`] = imageUrl;
+            viewModel.addBlogRequest[`${propName}`] = imageUrl;
         }
         viewModel.uploadLoading = false;
         return true;
@@ -213,34 +213,34 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
             <PageHeader
                 ghost={false}
                 onBack={() => window.history.back()}
-                title={testimonialId ? `${i18next.t("Testimonials.Edit.HeaderText")} ${testimonialId}` : i18next.t("Testimonials.Add.HeaderText")}
+                title={blogId ? `${i18next.t("Blogs.Edit.HeaderText")} ${blogId}` : i18next.t("Blogs.Add.HeaderText")}
             />
             {dataFetched ?
             <Form {...formItemLayout} layout={"vertical"} onFinish={onFinish} form={form}
-                  key={"testimonialForm"}
+                  key={"blogForm"}
                  scrollToFirstError>
                 <Row gutter={[24, 16]}>
                     <Col span={8}>
-                        <Form.Item name="title" initialValue={viewModel?.detailTestimonialResponse?.title}
+                        <Form.Item name="title" initialValue={viewModel?.detailBlogResponse?.title}
                                    key={"title"}
-                                   label={i18next.t("Testimonials.Label.title")}
+                                   label={i18next.t("Blogs.Label.title")}
                                    rules={[
                                        {
                                            required: true,
-                                           message: i18next.t("Testimonials.Validation.Message.title.Required")
+                                           message: i18next.t("Blogs.Validation.Message.title.Required")
                                        }
                                    ]}>
                             <Input onChange={onChanged}/>
                         </Form.Item>
                     </Col>
                     <Col span={8}>
-                        <Form.Item name="language" initialValue={viewModel?.detailTestimonialResponse?.language}
+                        <Form.Item name="language" initialValue={viewModel?.detailBlogResponse?.language}
                                    key={"language"}
-                                   label={i18next.t("Testimonials.Label.language")}
+                                   label={i18next.t("Blogs.Label.language")}
                                    rules={[
                                        {
                                            required: true,
-                                           message: i18next.t("Testimonials.Validation.Message.language.Required")
+                                           message: i18next.t("Blogs.Validation.Message.language.Required")
                                        }
                                    ]}>
                             <Select showSearch={true} onChange={(e) => onSelectChanged(e, "language")} >
@@ -249,20 +249,34 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                         </Form.Item>
                     </Col>
                     <Col span={8}>
-                        <Form.Item name="isActive" initialValue={viewModel?.detailTestimonialResponse?.isActive}
+                        <Form.Item name="isActive" initialValue={viewModel?.detailBlogResponse?.isActive}
                                    key={"isActive"}
-                                   label={i18next.t("Testimonials.Label.isActive")}>
-                            <Checkbox onChange={onCheckboxChange} defaultChecked={viewModel?.detailTestimonialResponse?.isActive} />
+                                   label={i18next.t("Blogs.Label.isActive")}>
+                            <Checkbox onChange={onCheckboxChange} defaultChecked={viewModel?.detailBlogResponse?.isActive} />
                         </Form.Item>
                     </Col>
-                    <Col span={24}>
-                        <Form.Item name="comment" initialValue={viewModel?.detailTestimonialResponse?.comment}
-                                   key={"comment"}
-                                   label={i18next.t("Testimonials.Label.comment")}
+
+                    <Col span={8}>
+                        <Form.Item name="displayOrder" initialValue={viewModel?.detailBlogResponse?.displayOrder}
+                                   key={"displayOrder"}
+                                   label={i18next.t("Blogs.Label.displayOrder")}
                                    rules={[
                                        {
                                            required: true,
-                                           message: i18next.t("Testimonials.Validation.Message.comment.Required")
+                                           message: i18next.t("Blogs.Validation.Message.displayOrder.Required")
+                                       }
+                                   ]}>
+                            <InputNumber style={{width: "100%"}} onChange={(e) => onNumberChanged(e, 'displayOrder')}/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={24}>
+                        <Form.Item name="description" initialValue={viewModel?.detailBlogResponse?.description}
+                                   key={"description"}
+                                   label={i18next.t("Blogs.Label.description")}
+                                   rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Blogs.Validation.Message.description.Required")
                                        }
                                    ]}>
                             {/*<Input.TextArea onChange={onChanged}/>*/}
@@ -272,13 +286,13 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                     </Col>
                     <Divider>{i18next.t("General.Section.Uploads")}</Divider>
                     <Col offset={10} span={8}>
-                        <Form.Item name="picture" initialValue={viewModel?.detailTestimonialResponse?.picture}
+                        <Form.Item name="picture" initialValue={viewModel?.detailBlogResponse?.picture}
                                    key={"picture"}
-                                   label={i18next.t("Testimonials.Label.picture")}
+                                   label={i18next.t("Blogs.Label.picture")}
                                    rules={[
                                        {
                                            required: true,
-                                           message: i18next.t("Testimonials.Validation.Message.picture.Required")
+                                           message: i18next.t("Blogs.Validation.Message.picture.Required")
                                        }
                                    ]}>
                             <Upload
@@ -289,9 +303,9 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                                 customRequest={customRequest}
                                 showUploadList={false}
                             >
-                                {viewModel?.detailTestimonialResponse?.picture ? (
+                                {viewModel?.detailBlogResponse?.picture ? (
                                     <div>
-                                        <Image src={viewModel.detailTestimonialResponse.picture}
+                                        <Image src={viewModel.detailBlogResponse.picture}
                                                fallback={ImageConstants.fallbackImage}
                                                alt="picture"
                                                style={{width: '100%', height: '150px'}}/>
@@ -327,4 +341,4 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
     )
 }));
 
-export default EditTestimonial;
+export default EditBlog;

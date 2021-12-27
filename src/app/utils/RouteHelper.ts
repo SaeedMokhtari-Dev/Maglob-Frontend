@@ -28,6 +28,10 @@ export function getEditProductRoute(productId: number = null): string
 {
     return Routes.editProduct.replace('/:productId', productId ? `/${productId}` : '');
 }
+export function getEditBlogRoute(blogId: number = null): string
+{
+    return Routes.editBlog.replace('/:blogId', blogId ? `/${blogId}` : '');
+}
 export function getEditCustomerSupportRequestRoute(customerSupportRequestId: number = null): string
 {
     return Routes.editCustomerSupportRequest.replace('/:customerSupportRequestId', customerSupportRequestId ? `/${customerSupportRequestId}` : '');

@@ -133,14 +133,14 @@ const EditDynamicPage: React.FC<EditDynamicPageProps> = inject(Stores.dynamicPag
             viewModel.addDynamicPageRequest[`${propName}`] = e;
     }
     function onEditorChanged(e){
-        debugger;
+        
         if(dynamicPageId)
             viewModel.editDynamicPageRequest.editor = e;
         else
             viewModel.addDynamicPageRequest.editor = e;
     }
     function onChanged(e){
-        debugger;
+        
         if(dynamicPageId)
             viewModel.editDynamicPageRequest[`${e.target.id}`] = e.target.value;
         else

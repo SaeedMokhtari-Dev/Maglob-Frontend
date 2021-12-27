@@ -9,6 +9,8 @@ export default class DetailProductResponse implements IDeserialize
     model: string;
     quality: string;
     volume: string;
+    oilType: string;
+    detailDescription: string;
     displayOrder: number;
     isActive: boolean;
     descriptionSeo: string;

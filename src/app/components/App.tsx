@@ -38,6 +38,8 @@ import EditCustomerSupportRequest
     from "../../entities/CustomerSupportRequests/components/edit/EditCustomerSupportRequest";
 import DetailCustomerSupportRequest
     from "../../entities/CustomerSupportRequests/components/detail/DetailCustomerSupportRequest";
+import BlogList from "../../entities/Blogs/components/list/BlogList";
+import EditBlog from "../../entities/Blogs/components/edit/EditBlog";
 
 
 const App: React.FC = () =>
@@ -104,6 +106,10 @@ const App: React.FC = () =>
                                     <Route exact roles={[RoleType.admin]} path={Routes.product} component={ProductList} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.editProduct} component={EditProduct} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.addProduct} component={EditProduct} />
+
+                                    <Route exact roles={[RoleType.admin]} path={Routes.blog} component={BlogList} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.editBlog} component={EditBlog} />
+                                    <Route exact roles={[RoleType.admin]} path={Routes.addBlog} component={EditBlog} />
 
                                     <Route exact roles={[RoleType.admin]} path={Routes.customerSupportRequest} component={CustomerSupportRequestList} />
                                     <Route exact roles={[RoleType.admin]} path={Routes.editCustomerSupportRequest} component={EditCustomerSupportRequest} />

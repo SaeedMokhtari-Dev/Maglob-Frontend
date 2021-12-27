@@ -12,4 +12,5 @@ export default {
     dynamicPageStore: 'dynamicPageStore',
     productStore: 'productStore',
     customerSupportRequestStore: 'customerSupportRequestStore',
+    blogStore: 'blogStore',
 }

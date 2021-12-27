@@ -10,6 +10,7 @@ import TestimonialStore from "../../entities/Testimonials/stores/TestimonialStor
 import DynamicPageStore from "../../entities/DynamicPages/stores/DynamicPageStore";
 import ProductStore from "../../entities/Products/stores/ProductStore";
 import CustomerSupportRequestStore from "../../entities/CustomerSupportRequests/stores/CustomerSupportRequestStore";
+import BlogStore from "../../entities/Blogs/stores/BlogStore";
 
 export class AppStore
 {
@@ -25,6 +26,7 @@ export class AppStore
     dynamicPageStore: DynamicPageStore;
     productStore: ProductStore;
     customerSupportRequestStore: CustomerSupportRequestStore;
+    blogStore: BlogStore;
 
     constructor()
     {
@@ -40,5 +42,6 @@ export class AppStore
         this.dynamicPageStore = new DynamicPageStore(this);
         this.productStore = new ProductStore(this);
         this.customerSupportRequestStore = new CustomerSupportRequestStore(this);
+        this.blogStore = new BlogStore(this);
     }
 }

@@ -15,6 +15,7 @@ import "./EditProduct.scss";
 import Languages from "../../../../app/constants/Languages";
 import {PlusOutlined} from "@ant-design/icons";
 import ImageConstants from "../../../../app/constants/ImageConstants";
+import ReactQuill from "react-quill";
 const {useEffect} = React;
 const { Option } = Select;
 
@@ -32,6 +33,27 @@ const EditProduct: React.FC<EditProductProps> = inject(Stores.productStore)(obse
     const [certificatesOptions, setCertificateOptions] = React.useState([]);
 
     const [form] = Form.useForm();
+
+    const toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote', 'code-block'],
+
+        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+
+        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'font': [] }],
+        [{ 'align': [] }],
+        ['link', 'image'],
+
+        ['clean']                                         // remove formatting button
+    ];
 
     const formItemLayout = {
         labelCol: {
@@ -61,11 +83,12 @@ const EditProduct: React.FC<EditProductProps> = inject(Stores.productStore)(obse
         {
             await productStore.editProductViewModel.getDetailProduct(productIdParam);
             productStore.editProductViewModel.editProductRequest.productId = productIdParam;
-            debugger;
         }
         else{
             productStore.editProductViewModel.addProductRequest = new AddProductRequest();
             productStore.editProductViewModel.detailProductResponse = new DetailProductResponse();
+            productStore.editProductViewModel.detailProductResponse.detailDescription = "<p>Hello World</p>";
+            productStore.editProductViewModel.addProductRequest.detailDescription = "<p>Hello World</p>";
         }
 
         let languagesOptions = [];
@@ -110,7 +133,7 @@ const EditProduct: React.FC<EditProductProps> = inject(Stores.productStore)(obse
         productStore.onProductEditPageUnload();
     }
     function onSelectChanged(e, propName){
-        debugger;
+        
         if(productId)
             viewModel.editProductRequest[`${propName}`] = e;
         else
@@ -183,7 +206,12 @@ const EditProduct: React.FC<EditProductProps> = inject(Stores.productStore)(obse
     function customRequest(){
         return true;
     }
-
+    function onDetailDescriptionChanged(e){
+        if(productId)
+            viewModel.editProductRequest.detailDescription = e;
+        else
+            viewModel.addProductRequest.detailDescription = e;
+    }
     return (
         <div>
             <PageHeader
@@ -239,6 +267,19 @@ const EditProduct: React.FC<EditProductProps> = inject(Stores.productStore)(obse
                         <Form.Item name="volume" initialValue={viewModel?.detailProductResponse?.volume}
                                    key={"volume"}
                                    label={i18next.t("Products.Label.volume")}
+                                   /*rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Products.Validation.Message.volume.Required")
+                                       }
+                                   ]}*/>
+                            <Input onChange={onChanged}/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={8}>
+                        <Form.Item name="oilType" initialValue={viewModel?.detailProductResponse?.oilType}
+                                   key={"oilType"}
+                                   label={i18next.t("Products.Label.oilType")}
                                    /*rules={[
                                        {
                                            required: true,
@@ -328,6 +369,23 @@ const EditProduct: React.FC<EditProductProps> = inject(Stores.productStore)(obse
                                    ]}>
                             <Input.TextArea onChange={onChanged}/>
                             {/*<ReactQuill modules={{toolbar: toolbarOptions}} theme="snow" style={{direction: "ltr"}} onChange={onEditorChanged}/>*/}
+                        </Form.Item>
+                    </Col>
+                    <Divider>{i18next.t("Products.Label.detailDescription")}</Divider>
+
+                    <Col span={24}>
+                        <Form.Item name="detailDescription" initialValue={viewModel?.detailProductResponse?.detailDescription}
+                                   key={"detailDescription"}
+                                   label={i18next.t("Products.Label.detailDescription")}
+                                   rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Products.Validation.Message.detailDescription.Required")
+                                       }
+                                   ]}>
+                            {/*<Input.TextArea onChange={onChanged}/>*/}
+                            <ReactQuill modules={{toolbar: toolbarOptions}} theme="snow" style={{direction: "ltr"}}
+                                        onChange={onDetailDescriptionChanged}/>
                         </Form.Item>
                     </Col>
                     <Divider>{i18next.t("General.Section.Uploads")}</Divider>

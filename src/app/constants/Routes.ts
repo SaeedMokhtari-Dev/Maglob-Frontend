@@ -44,4 +44,8 @@ export default
     product: "/app/product",
     editProduct: "/app/product/edit/:productId",
     addProduct: "/app/product/add",
+    // Blog
+    blog: "/app/blog",
+    editBlog: "/app/blog/edit/:blogId",
+    addBlog: "/app/blog/add",
 }

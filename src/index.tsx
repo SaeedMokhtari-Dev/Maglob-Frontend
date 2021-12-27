@@ -56,6 +56,7 @@ ReactDOM.render(
                       dynamicPageStore={appStore.dynamicPageStore}
                       productStore={appStore.productStore}
                       customerSupportRequestStore={appStore.customerSupportRequestStore}
+                      blogStore={appStore.blogStore}
             >
                 <App />
             </Provider>

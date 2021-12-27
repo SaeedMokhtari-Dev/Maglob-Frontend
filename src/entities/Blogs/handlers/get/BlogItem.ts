@@ -1,20 +1,18 @@
 import IDeserialize from "../../../../app/interfaces/deserialize";
 import {makeAutoObservable} from "mobx";
 
-export default class ProductItem implements IDeserialize
+export default class BlogItem implements IDeserialize
 {
     key: number;
-    name: string;
-    description: string;
-    model: string;
-    quality: string;
-    volume: string;
+    title: string;
+    /*description: string;
+    picture: string;*/
+    publishedDate: string;
     displayOrder: number;
     isActive: boolean;
-    createdAt: string;
-    modifiedAt: string;
+    /*createdAt: string;
+    modifiedAt: string;*/
     language: string;
-    oilType: string;
 
     constructor() {
         makeAutoObservable(this);

@@ -19,7 +19,7 @@
     "mobx": "^6.1.8",
     "mobx-react": "^7.1.0",
     "natural-orderby": "^2.0.3",
-    "node-sass": "^6.0.0",
+    "node-sass": "^5.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",

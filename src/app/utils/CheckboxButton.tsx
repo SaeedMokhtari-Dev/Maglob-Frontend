@@ -14,7 +14,7 @@ const CheckboxButton = ({ value, labelUnselect, labelSelect, id, typeId, action 
     const [checked, setChecked] = useState(value);
 
     function handleChange(e) {
-        debugger;
+        
         setChecked(e.target.checked);
         action(e, id, typeId);
     }

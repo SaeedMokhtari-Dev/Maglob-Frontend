@@ -17,9 +17,8 @@ export default class EditProductRequest
     createdAt: string;
     modifiedAt: string;
     language: string;
-
-
-
+    oilType: string;
+    detailDescription: string;
 
     constructor(
     ) {

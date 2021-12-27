@@ -339,7 +339,8 @@
   "Products.Label.createdAt": "createdAt",
   "Products.Label.modifiedAt": "modifiedAt",
   "Products.Label.language": "language",
-
+  "Products.Label.oilType": "oilType",
+  "Products.Label.detailDescription": "detailDescription",
 
   "Products.Button.Register": "Save",
   "Products.Button.Cancel": "Cancel",
@@ -386,6 +387,38 @@
   "Testimonials.Error.Edit.Message": "An error has occurred while trying to edit testimonial.",
   "Testimonials.Error.Delete.Message": "An error has occurred while trying to delete testimonial.",
   "Testimonials.Error.List.Message": "An error has occurred while trying to get testimonial list.",
+
+  "Blogs.Menu.Title": "Blogs",
+  "Blogs.Page.Title": "Blogs",
+  "Blogs.Page.SubTitle": "This page is for define blogs",
+  "Blogs.Add.HeaderText": "Add a new Blog",
+  "Blogs.Edit.HeaderText": "Edit Blog with Id: ",
+  "Blogs.Label.key": "key",
+  "Blogs.Label.title": "title",
+  "Blogs.Label.description": "description",
+  "Blogs.Label.picture": "picture",
+  "Blogs.Label.publishedDate": "publishedDate",
+  "Blogs.Label.displayOrder": "displayOrder",
+  "Blogs.Label.isActive": "isActive",
+  "Blogs.Label.createdAt": "createdAt",
+  "Blogs.Label.modifiedAt": "modifiedAt",
+  "Blogs.Label.language": "language",
+
+  "Blogs.Button.Register": "Save",
+  "Blogs.Button.Cancel": "Cancel",
+
+  "Blogs.Validation.Message.title.Required": "Please enter title",
+
+  "Api.Blog.Add.Successful": "A new blog added successfully",
+  "Api.Blog.Edit.Successful": "selected blog edited successfully",
+  "Api.Blog.Deleted.Successful": "selected blog deleted successfully",
+
+  "Blogs.Error.Get.Message": "An error has occurred while trying to get blogs list.",
+  "Blogs.Error.Detail.Message": "An error has occurred while trying to get blog details.",
+  "Blogs.Error.Add.Message": "An error has occurred while trying to add new blog.",
+  "Blogs.Error.Edit.Message": "An error has occurred while trying to edit blog.",
+  "Blogs.Error.Delete.Message": "An error has occurred while trying to delete blog.",
+  "Blogs.Error.List.Message": "An error has occurred while trying to get blog list.",
 
   "DynamicPages.Menu.Title": "DynamicPages",
   "DynamicPages.Page.Title": "DynamicPages",

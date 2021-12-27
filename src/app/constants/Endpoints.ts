@@ -66,6 +66,14 @@ export default
     apiTestimonialList: "/api/testimonial/list",
     apiTestimonialActive: "/api/testimonial/active",
 
+    apiBlogGet: "/api/blog/get",
+    apiBlogAdd: "/api/blog/add",
+    apiBlogEdit: "/api/blog/edit",
+    apiBlogDetail: "/api/blog/detail",
+    apiBlogDelete: "/api/blog/delete",
+    apiBlogList: "/api/blog/list",
+    apiBlogActive: "/api/blog/active",
+
     apiDynamicPageGet: "/api/dynamic-page/get",
     apiDynamicPageAdd: "/api/dynamic-page/add",
     apiDynamicPageEdit: "/api/dynamic-page/edit",
