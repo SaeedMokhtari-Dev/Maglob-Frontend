@@ -65,7 +65,7 @@ const Login: React.FC<LoginProps> = inject('authStore')(observer(({authStore}) =
         <div>
                 <div className={"mainContent"}>
                     <div className="signup-connect">
-                        <img src="/images/maglube-logo.jpeg" className="login-logo" alt="logo"/>
+                        <img src="/images/logo.png" className="login-logo" alt="logo"/>
                     </div>
                     <div className="signup-classic">
                         <Form layout="vertical" onFinish={onFinish} >
@@ -95,7 +95,7 @@ const Login: React.FC<LoginProps> = inject('authStore')(observer(({authStore}) =
                             {viewModel.errorMessage && (
                                 <div className='response-error-msg'>{viewModel.errorMessage}</div>
                             )}
-                            <Button type="primary" className={"button"} loading={viewModel.isProcessing} htmlType="submit">
+                            <Button block type="primary" className={"button"} loading={viewModel.isProcessing} htmlType="submit">
                                 {i18next.t("Authentication.Button.Login")}
                             </Button>
                             {/*<div className="link">

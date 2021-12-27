@@ -21,7 +21,7 @@ const SidebarHeader: React.FC<SidebarHeaderProps> = inject(Stores.pageStore)(obs
 
     return (
         <div className='sidebar-header' style={{height: Sizes.headerHeight}}>
-            <img onClick={navigateHome} title={i18next.t('App.Title')} alt={i18next.t('App.Title')} className='logo noselect' src="/images/wp-soft-logo-sidebar.png" />
+            <img onClick={navigateHome} title={i18next.t('App.Title')} alt={i18next.t('App.Title')} className='logo noselect' src="/images/logo.png" />
         </div>
     )
 }));

@@ -1,44 +1,44 @@
 @import "../../../app/styles/colors";
 
 .ant-layout-sider {
-  background: orange;
+  background: #001d3d;
   .ant-layout-sider-children {
-    background: orange;
+    background: #001d3d;
     .ant-menu-dark{
-      background: orange;
-      color: black;
+      background: #001d3d;
+      color: #fff;
       .ant-menu-item {
-        color: black;
+        color: #fff;
 
         a {
-          color: black;
+          color: #fff;
         }
       }
     }
     .ant-menu-submenu {
       .ant-menu-submenu-title {
         .ant-menu-submenu-arrow {
-          color: black;
+          color: #fff;
         }
       }
-      color: black;
-      background: orange;
+      color: #fff;
+      background: #001d3d;
       .ant-menu {
-        background: orange;
-        color: black;
+        background: #001d3d;
+        color: #fff;
       .ant-menu-item {
-        background: orange;
-        color: black;
+        background: #001d3d;
+        color: #fff;
 
         a {
-          color: black;
+          color: #fff;
         }
       }
       }
     }
   }
   .ant-layout-sider-trigger {
-    background: orange;
+    background: #001d3d;
   }
 }
 

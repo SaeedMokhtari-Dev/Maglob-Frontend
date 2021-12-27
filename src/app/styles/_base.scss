@@ -1,26 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-@import "colors";
 
-@font-face {font-family: "Nassim";
-  src: url("//db.onlinewebfonts.com/t/29e9a3f5cf847428382058f505969b17.eot");
-  src: url("//db.onlinewebfonts.com/t/29e9a3f5cf847428382058f505969b17.eot?#iefix") format("embedded-opentype"),
-  url("//db.onlinewebfonts.com/t/29e9a3f5cf847428382058f505969b17.woff2") format("woff2"),
-  url("//db.onlinewebfonts.com/t/29e9a3f5cf847428382058f505969b17.woff") format("woff"),
-  url("//db.onlinewebfonts.com/t/29e9a3f5cf847428382058f505969b17.ttf") format("truetype"),
-  url("//db.onlinewebfonts.com/t/29e9a3f5cf847428382058f505969b17.svg#Nassim") format("svg"); }
-
-[dir=ltr] body {
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+@font-face {
+  font-family: "Vazir";
+  src: url("../fonts/Vazir.eot");
+  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff") format("woff"),
+    url("../fonts/Vazir.ttf") format("truetype");
+}
+body {
+  font-family: "Vazir", "Helvetica Neue", sans-serif;
   color: $foreground;
 }
-[dir=rtl] body {
-  font-family: "Nassim", "Helvetica Neue", sans-serif;
-  color: $foreground;
-}
+
+
 html {
   font-size: 100%;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
 .popup-ct {
@@ -50,18 +47,34 @@ svg {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
-.red{
+.red {
   color: red;
 }
 .green {
-  color :green;
+  color: green;
 }
 
 .phone-number {
   direction: ltr;
 }
 
-@media screen and (min-width: 320px) { body {font-size:0.5rem;} }
-@media screen and (min-width: 640px) { body {font-size:0.9rem;} }
-@media screen and (min-width:960px) { body {font-size:1.1rem;} }
-@media screen and (min-width:1100px) { body {font-size:1.3rem;} }
+@media screen and (min-width: 320px) {
+  body {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body {
+    font-size: 1.3rem;
+  }
+}

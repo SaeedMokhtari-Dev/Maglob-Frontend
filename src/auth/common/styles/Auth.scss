@@ -7,24 +7,19 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   background: hsl(0, 0, 100);
-  border-radius: 36px;
-  box-shadow: 0 3px 25px hsla(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px hsla(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
-  border: 8px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #743AB6, #d53a9d);
-
-
+  flex-direction: column;
   .signup-connect,
-  .signup-classic
-  {
-    width: 50%;
+  .signup-classic {
+    width: 100%;
     padding: 30px 50px;
   }
 
   .signup-connect {
-    background: #FFF; //linear-gradient(134deg, hsl(44, 96%, 65%), hsl(34, 95%, 45%));
+    background: #fff; //linear-gradient(134deg, hsl(44, 96%, 65%), hsl(34, 95%, 45%));
     color: hsl(0, 0, 100);
 
     h1 {
@@ -33,11 +28,9 @@
       margin-bottom: 40px;
       text-shadow: 0 2px 3px hsla(0, 0, 0, 0.1);
     }
-
   }
 
   .signup-classic {
-
     h2 {
       font-size: 16px;
       font-weight: normal;
@@ -47,30 +40,29 @@
     }
 
     fieldset::after {
-      content: '\f007';
+      content: "\f007";
       font-family: FontAwesome;
       position: absolute;
       right: 15px;
       top: 17px;
       z-index: 2;
       width: 20px;
-      color: hsla(0, 0, 0, .2);
+      color: hsla(0, 0, 0, 0.2);
       text-align: center;
     }
 
     fieldset.email::after {
-      content: '\f0e0';
+      content: "\f0e0";
     }
 
     fieldset.password::after {
-      content: '\f023';
+      content: "\f023";
     }
-
   }
 }
-@media(min-width:856px) {
+@media (min-width: 856px) {
   .mainContent {
-    width: 70%;
+    width: 600px;
     .role-type {
       margin-right: 5%;
       margin-left: 5%;
@@ -78,25 +70,7 @@
     }
   }
 }
-@media(max-width:856px) {
-  .mainContent {
-      width: 90%;
-
-    .role-type {
-      display: block;
-      text-align: center;
-    }
-    .signup-classic{
-      width: 100%;
-    }
-
-    .signup-connect{
-      display: none;
-    }
-  }
-}
-
-@media(max-width:452px) {
+@media (max-width: 856px) {
   .mainContent {
     width: 90%;
 
@@ -104,16 +78,30 @@
       display: block;
       text-align: center;
     }
-    .signup-classic{
+    .signup-classic {
+      width: 100%;
+      padding: 20px 15px;
+
+    }
+
+  }
+}
+
+@media (max-width: 452px) {
+  .mainContent {
+    width: 90%;
+
+    .role-type {
+      display: block;
+      text-align: center;
+    }
+    .signup-classic {
       width: 100%;
     }
-    .signup-connect{
-        display: none;
-      }
 
-      p {
-        font-size: 10px;
-      }
+
+    p {
+      font-size: 10px;
     }
   }
-
+}
