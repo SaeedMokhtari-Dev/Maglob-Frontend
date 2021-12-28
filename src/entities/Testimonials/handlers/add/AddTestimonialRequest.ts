@@ -7,6 +7,10 @@ export default class AddTestimonialRequest
     picture: string;
     isActive: boolean;
     language: string;
+    name: string;
+    socialNetwork: string;
+    job: string;
+    smallPicture: string;
 
 
     constructor(

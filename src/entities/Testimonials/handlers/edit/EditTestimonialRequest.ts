@@ -9,6 +9,11 @@ export default class EditTestimonialRequest
     pictureChanged: string;
     isActive: boolean;
     language: string;
+    name: string;
+    socialNetwork: string;
+    job: string;
+    smallPicture: string;
+    smallPictureChanged: boolean;
 
 
     constructor(

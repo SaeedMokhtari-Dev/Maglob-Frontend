@@ -9,6 +9,9 @@ export default class TestimonialItem implements IDeserialize
     createdAt: string;
     modifiedAt: string;
     language: string;
+    name: string;
+    socialNetwork: string;
+    job: string;
 
     constructor() {
         makeAutoObservable(this);

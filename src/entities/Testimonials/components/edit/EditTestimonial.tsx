@@ -234,6 +234,45 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                         </Form.Item>
                     </Col>
                     <Col span={8}>
+                        <Form.Item name="name" initialValue={viewModel?.detailTestimonialResponse?.name}
+                                   key={"name"}
+                                   label={i18next.t("Testimonials.Label.name")}
+                                   rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Testimonials.Validation.Message.name.Required")
+                                       }
+                                   ]}>
+                            <Input onChange={onChanged}/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={8}>
+                        <Form.Item name="job" initialValue={viewModel?.detailTestimonialResponse?.job}
+                                   key={"job"}
+                                   label={i18next.t("Testimonials.Label.job")}
+                                   rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Testimonials.Validation.Message.job.Required")
+                                       }
+                                   ]}>
+                            <Input onChange={onChanged}/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={8}>
+                        <Form.Item name="socialNetwork" initialValue={viewModel?.detailTestimonialResponse?.socialNetwork}
+                                   key={"socialNetwork"}
+                                   label={i18next.t("Testimonials.Label.socialNetwork")}
+                                   rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Testimonials.Validation.Message.socialNetwork.Required")
+                                       }
+                                   ]}>
+                            <Input onChange={onChanged}/>
+                        </Form.Item>
+                    </Col>
+                    <Col span={8}>
                         <Form.Item name="language" initialValue={viewModel?.detailTestimonialResponse?.language}
                                    key={"language"}
                                    label={i18next.t("Testimonials.Label.language")}
@@ -271,7 +310,7 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                         </Form.Item>
                     </Col>
                     <Divider>{i18next.t("General.Section.Uploads")}</Divider>
-                    <Col offset={10} span={8}>
+                    <Col offset={4} span={8}>
                         <Form.Item name="picture" initialValue={viewModel?.detailTestimonialResponse?.picture}
                                    key={"picture"}
                                    label={i18next.t("Testimonials.Label.picture")}
@@ -294,6 +333,36 @@ const EditTestimonial: React.FC<EditTestimonialProps> = inject(Stores.testimonia
                                         <Image src={viewModel.detailTestimonialResponse.picture}
                                                fallback={ImageConstants.fallbackImage}
                                                alt="picture"
+                                               style={{width: '100%', height: '150px'}}/>
+                                        <p>{i18next.t("General.Upload.ChangePhoto")}</p>
+                                    </div>
+                                ) : uploadButton}
+                            </Upload>
+                        </Form.Item>
+                    </Col>
+                    <Col offset={4} span={8}>
+                        <Form.Item name="smallPicture" initialValue={viewModel?.detailTestimonialResponse?.smallPicture}
+                                   key={"smallPicture"}
+                                   label={i18next.t("Testimonials.Label.smallPicture")}
+                                   rules={[
+                                       {
+                                           required: true,
+                                           message: i18next.t("Testimonials.Validation.Message.smallPicture.Required")
+                                       }
+                                   ]}>
+                            <Upload
+                                key={"smallPicture"}
+                                className={"avatar-uploader"}
+                                maxCount={1}
+                                beforeUpload={async (file) =>{await beforeUpload(file, "smallPicture")}}
+                                customRequest={customRequest}
+                                showUploadList={false}
+                            >
+                                {viewModel?.detailTestimonialResponse?.smallPicture ? (
+                                    <div>
+                                        <Image src={viewModel.detailTestimonialResponse.smallPicture}
+                                               fallback={ImageConstants.fallbackImage}
+                                               alt="smallPicture"
                                                style={{width: '100%', height: '150px'}}/>
                                         <p>{i18next.t("General.Upload.ChangePhoto")}</p>
                                     </div>

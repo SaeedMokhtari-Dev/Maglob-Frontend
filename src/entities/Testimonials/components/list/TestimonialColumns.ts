@@ -8,5 +8,8 @@ export default
     {title: "Testimonials.Label.createdAt", dataIndex: "createdAt", key: "createdAt", responsive: ['md']},
     {title: "Testimonials.Label.modifiedAt", dataIndex: "modifiedAt", key: "modifiedAt", responsive: ['md']},
     {title: "Testimonials.Label.language", dataIndex: "language", key: "language", responsive: ['md']},
+    {title: "Testimonials.Label.name", dataIndex: "name", key: "name", responsive: ['md']},
+    {title: "Testimonials.Label.socialNetwork", dataIndex: "socialNetwork", key: "socialNetwork", responsive: ['md']},
+    {title: "Testimonials.Label.job", dataIndex: "job", key: "job", responsive: ['md']},
 ]
 

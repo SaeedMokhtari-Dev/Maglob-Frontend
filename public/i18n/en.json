@@ -371,6 +371,10 @@
   "Testimonials.Label.createdAt": "createdAt",
   "Testimonials.Label.modifiedAt": "modifiedAt",
   "Testimonials.Label.language": "language",
+  "Testimonials.Label.name": "name",
+  "Testimonials.Label.job": "job",
+  "Testimonials.Label.socialNetwork": "socialNetwork",
+  "Testimonials.Label.smallPicture": "smallPicture",
 
   "Testimonials.Button.Register": "Save",
   "Testimonials.Button.Cancel": "Cancel",

@@ -10,6 +10,10 @@ export default class DetailTestimonialResponse implements IDeserialize
     createdAt: string;
     modifiedAt: string;
     language: string;
+    name: string;
+    socialNetwork: string;
+    job: string;
+    smallPicture: string;
 
     deserialize(input: any): this
     {
