@@ -8,5 +8,6 @@ export default
     {title: "DynamicPages.Label.createdAt", dataIndex: "createdAt", key: "createdAt", responsive: ['md']},
     {title: "DynamicPages.Label.modifiedAt", dataIndex: "modifiedAt", key: "modifiedAt", responsive: ['md']},
     {title: "DynamicPages.Label.language", dataIndex: "language", key: "language", responsive: ['md']},
+    {title: "DynamicPages.Label.url", dataIndex: "url", key: "url", responsive: ['md']},
 ]
 

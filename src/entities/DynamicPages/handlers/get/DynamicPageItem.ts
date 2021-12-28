@@ -10,7 +10,7 @@ export default class DynamicPageItem implements IDeserialize
     createdAt: string;
     modifiedAt: string;
     language: string;
-
+    url: string;
 
     constructor() {
         makeAutoObservable(this);

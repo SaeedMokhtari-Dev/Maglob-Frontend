@@ -10,6 +10,7 @@ export default class DetailDynamicPageResponse implements IDeserialize
     createdAt: string;
     modifiedAt: string;
     language: string;
+    url: string;
 
     deserialize(input: any): this
     {

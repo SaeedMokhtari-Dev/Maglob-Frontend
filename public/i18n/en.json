@@ -437,6 +437,7 @@
   "DynamicPages.Label.createdAt": "createdAt",
   "DynamicPages.Label.modifiedAt": "modifiedAt",
   "DynamicPages.Label.language": "language",
+  "DynamicPages.Label.url": "url",
 
   "DynamicPages.Button.Register": "Save",
   "DynamicPages.Button.Cancel": "Cancel",

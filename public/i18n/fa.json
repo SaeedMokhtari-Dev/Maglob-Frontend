@@ -399,6 +399,7 @@
   "DynamicPages.Label.createdAt": "تاریخ ایجاد",
   "DynamicPages.Label.modifiedAt": "تاریخ ویرایش",
   "DynamicPages.Label.language": "زبان",
+  "DynamicPages.Label.url": "لینک",
 
 
   "DynamicPages.Validation.Message.title.Required": "لطفا عنوان را وارد نمائید.",

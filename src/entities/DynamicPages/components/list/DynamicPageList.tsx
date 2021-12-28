@@ -30,10 +30,16 @@ interface DynamicPageListProps {
 const DynamicPageList: React.FC<DynamicPageListProps> = inject(Stores.dynamicPageStore)(observer(({dynamicPageStore}) => {
     DynamicPageColumns.forEach(w => {
        w.title = i18next.t(w.title);
-        if(w.key == "isActive")
+        if(w.key === "isActive")
         {
             w["render"] = (w) => {
                 return  w ? <CheckOutlined /> : <CloseOutlined />
+            }
+        }
+        if(w.key === "url")
+        {
+            w["render"] = (w) => {
+                return  w ? <a target="_blank" href={w}>{w}</a> : ""
             }
         }
     });
